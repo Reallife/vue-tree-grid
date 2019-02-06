@@ -25,7 +25,6 @@
                     <template v-if="hasChildren && columnIndex === 1">
                         <i
                             v-if="model._isExpanded"
-                            type="button"
                             class="tree-grid__expand-icon tree-grid__expand-icon--expanded"
                             @click="onExpand(false)"
                         >
@@ -33,7 +32,6 @@
                         </i>
                         <i
                             v-else
-                            type="button"
                             class="tree-grid__expand-icon tree-grid__expand-icon--collapsed"
                             @click="onExpand(true)"
                         >
