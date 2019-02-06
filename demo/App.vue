@@ -56,6 +56,7 @@ export default {
       tree: [
         {
           name: 'Parent 1',
+          _isExpanded: true,
           children: [
             {
               name: 'Child 1',
@@ -68,6 +69,7 @@ export default {
                 },
                 {
                   name: 'Child 2-2',
+                  _isChecked: true,
                 },
               ],
             },

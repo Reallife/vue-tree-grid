@@ -3277,12 +3277,12 @@ module.exports = __webpack_require__("35e8");
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3b9f259d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueTreeGrid.vue?vue&type=template&id=f56d8086&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0b9f2cc4-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueTreeGrid.vue?vue&type=template&id=d03c8ae8&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"tree-grid__wrapper"},[_c('div',{staticClass:"tree-grid__header-wrapper"},[_c('table',{staticClass:"tree-grid__table",attrs:{"cellspacing":"0","cellpadding":"0","border":"0"}},[_c('thead',[_c('tr',{staticClass:"tree-grid__header-row"},_vm._l((_vm.columns),function(column,columnIndex){return _c('th',{key:columnIndex,staticClass:"tree-grid__header-cell",attrs:{"width":column.width || 'auto'}},[_c('div',{staticClass:"tree-grid__header-cell-inner"},[(column.type === 'checkbox')?[_c('input',{staticClass:"tree-grid__checkbox tree-grid__checkbox--check-all",attrs:{"type":"checkbox"},domProps:{"checked":_vm.isAllChecked,"indeterminate":_vm.isAllIndeterminate},on:{"change":_vm.onCheckAll}})]:[_vm._t(column.prop + '--header-cell',[_vm._v("\n                                    "+_vm._s(column.label ? column.label : '')+"\n                                ")],{column:column})]],2)])}),0)]),_c('tbody',[(_vm.cloneTree.length > 0)?_vm._l((_vm.cloneTree),function(row,index){return _c('VueTreeGridRow',{key:index,attrs:{"columns":_vm.columns,"row":row,"children-property":_vm.childrenProperty,"row-class":_vm.rowClass},on:{"row-checked":_vm.onRowChecked,"row-expanded":_vm.onRowExpanded},scopedSlots:_vm._u([_vm._l((_vm.rowCellsSlotNames),function(slot){return {key:slot,fn:function(scope){return [_vm._t(slot,null,null,scope)]}}})])})}):[_c('tr',{staticClass:"tree-grid__empty-body-row"},[_c('td',{attrs:{"colspan":_vm.columns.length}},[_vm._v("\n                            "+_vm._s(_vm.emptyText)+"\n                        ")])])]],2)])])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/VueTreeGrid.vue?vue&type=template&id=f56d8086&
+// CONCATENATED MODULE: ./src/components/VueTreeGrid.vue?vue&type=template&id=d03c8ae8&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.split.js
 var es6_regexp_split = __webpack_require__("28a5");
@@ -3370,19 +3370,17 @@ var lodash_set_default = /*#__PURE__*/__webpack_require__.n(lodash_set);
 var lodash_get = __webpack_require__("c832");
 var lodash_get_default = /*#__PURE__*/__webpack_require__.n(lodash_get);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3b9f259d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueTreeGridRow.vue?vue&type=template&id=65f47826&
-var VueTreeGridRowvue_type_template_id_65f47826_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('Fragment',[_c('tr',{directives:[{name:"show",rawName:"v-show",value:(!_vm.model._isHidden && !_vm.model._isFolded),expression:"!model._isHidden && !model._isFolded"}],class:_vm.getRowClass()},_vm._l((_vm.columns),function(column,columnIndex){return _c('td',{key:columnIndex,staticClass:"tree-grid__body-cell",class:{'tree-grid__body-cell--with-checkbox': column.type === 'checkbox'}},[(column.type === 'checkbox')?[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model._isChecked),expression:"model._isChecked"}],staticClass:"tree-grid__checkbox",attrs:{"type":"checkbox","disabled":_vm.model._isDisabled},domProps:{"indeterminate":_vm.model._isIndeterminate,"checked":Array.isArray(_vm.model._isChecked)?_vm._i(_vm.model._isChecked,null)>-1:(_vm.model._isChecked)},on:{"change":[function($event){var $$a=_vm.model._isChecked,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.$set(_vm.model, "_isChecked", $$a.concat([$$v])))}else{$$i>-1&&(_vm.$set(_vm.model, "_isChecked", $$a.slice(0,$$i).concat($$a.slice($$i+1))))}}else{_vm.$set(_vm.model, "_isChecked", $$c)}},function (event) { return _vm.onCheckRow(event.target.checked); }]}})]:[(_vm.hasChildren && columnIndex === 1)?[(_vm.model._isExpanded)?_c('i',{staticClass:"tree-grid__expand-icon tree-grid__expand-icon--expanded",attrs:{"type":"button"},on:{"click":function($event){_vm.onExpand(false)}}},[_vm._v("\n                        -\n                    ")]):_c('i',{staticClass:"tree-grid__expand-icon tree-grid__expand-icon--collapsed",attrs:{"type":"button"},on:{"click":function($event){_vm.onExpand(true)}}},[_vm._v("\n                        +\n                    ")])]:_vm._e(),_vm._t(column.prop + '--row-cell',[_vm._v("\n                    "+_vm._s(_vm.row.hasOwnProperty(column.prop) ? _vm.row[column.prop] : '')+"\n                ")],{row:_vm.row})]],2)}),0),(_vm.hasChildren)?_vm._l((_vm.children),function(childRow,index){return _c('VueTreeGridRow',{directives:[{name:"show",rawName:"v-show",value:(!_vm.model._isHidden && !_vm.model._isFolded),expression:"!model._isHidden && !model._isFolded"}],key:index,attrs:{"columns":_vm.columns,"row":childRow,"children-property":_vm.childrenProperty,"row-class":_vm.rowClass},on:{"row-checked":_vm.onChildRowChecked,"row-expanded":_vm.onChildRowExpanded},scopedSlots:_vm._u([_vm._l((Object.keys(_vm.$scopedSlots)),function(slot){return {key:slot,fn:function(scope){return [_vm._t(slot,null,null,scope)]}}})])})}):_vm._e()],2)}
-var VueTreeGridRowvue_type_template_id_65f47826_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0b9f2cc4-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueTreeGridRow.vue?vue&type=template&id=ce47ce50&
+var VueTreeGridRowvue_type_template_id_ce47ce50_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('Fragment',[_c('tr',{directives:[{name:"show",rawName:"v-show",value:(!_vm.model._isHidden && !_vm.model._isFolded),expression:"!model._isHidden && !model._isFolded"}],class:_vm.getRowClass()},_vm._l((_vm.columns),function(column,columnIndex){return _c('td',{key:columnIndex,staticClass:"tree-grid__body-cell",class:{'tree-grid__body-cell--with-checkbox': column.type === 'checkbox'}},[(column.type === 'checkbox')?[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model._isChecked),expression:"model._isChecked"}],staticClass:"tree-grid__checkbox",attrs:{"type":"checkbox","disabled":_vm.model._isDisabled},domProps:{"indeterminate":_vm.model._isIndeterminate,"checked":Array.isArray(_vm.model._isChecked)?_vm._i(_vm.model._isChecked,null)>-1:(_vm.model._isChecked)},on:{"change":[function($event){var $$a=_vm.model._isChecked,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.$set(_vm.model, "_isChecked", $$a.concat([$$v])))}else{$$i>-1&&(_vm.$set(_vm.model, "_isChecked", $$a.slice(0,$$i).concat($$a.slice($$i+1))))}}else{_vm.$set(_vm.model, "_isChecked", $$c)}},function (event) { return _vm.onCheckRow(event.target.checked); }]}})]:[(_vm.hasChildren && columnIndex === 1)?[(_vm.model._isExpanded)?_c('i',{staticClass:"tree-grid__expand-icon tree-grid__expand-icon--expanded",on:{"click":function($event){_vm.onExpand(false)}}},[_vm._v("\n                        -\n                    ")]):_c('i',{staticClass:"tree-grid__expand-icon tree-grid__expand-icon--collapsed",on:{"click":function($event){_vm.onExpand(true)}}},[_vm._v("\n                        +\n                    ")])]:_vm._e(),_vm._t(column.prop + '--row-cell',[_vm._v("\n                    "+_vm._s(_vm.row.hasOwnProperty(column.prop) ? _vm.row[column.prop] : '')+"\n                ")],{row:_vm.row})]],2)}),0),(_vm.hasChildren)?_vm._l((_vm.children),function(childRow,index){return _c('VueTreeGridRow',{directives:[{name:"show",rawName:"v-show",value:(!_vm.model._isHidden && !_vm.model._isFolded),expression:"!model._isHidden && !model._isFolded"}],key:index,attrs:{"columns":_vm.columns,"row":childRow,"children-property":_vm.childrenProperty,"row-class":_vm.rowClass},on:{"row-checked":_vm.onChildRowChecked,"row-expanded":_vm.onChildRowExpanded},scopedSlots:_vm._u([_vm._l((Object.keys(_vm.$scopedSlots)),function(slot){return {key:slot,fn:function(scope){return [_vm._t(slot,null,null,scope)]}}})])})}):_vm._e()],2)}
+var VueTreeGridRowvue_type_template_id_ce47ce50_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/VueTreeGridRow.vue?vue&type=template&id=65f47826&
+// CONCATENATED MODULE: ./src/components/VueTreeGridRow.vue?vue&type=template&id=ce47ce50&
 
 // CONCATENATED MODULE: ./node_modules/vue-fragment/dist/vue-fragment.esm.js
 function vue_fragment_esm_defineProperty(e,n,t){return n in e?Object.defineProperty(e,n,{value:t,enumerable:!0,configurable:!0,writable:!0}):e[n]=t,e}function vue_fragment_esm_objectSpread(e){for(var n=1;n<arguments.length;n++){var t=null!=arguments[n]?arguments[n]:{},r=Object.keys(t);"function"==typeof Object.getOwnPropertySymbols&&(r=r.concat(Object.getOwnPropertySymbols(t).filter(function(e){return Object.getOwnPropertyDescriptor(t,e).enumerable}))),r.forEach(function(n){vue_fragment_esm_defineProperty(e,n,t[n])})}return e}var freeze=function(e,n,t){Object.defineProperty(e,n,{configurable:!0,get:function(){return t},set:function(e){console.warn("tried to set frozen property ".concat(n," with ").concat(e))}})},unfreeze=function(e,n){var t=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;Object.defineProperty(e,n,{configurable:!0,writable:!0,value:t})},component={abstract:!0,name:"Fragment",props:{name:{type:String,default:function(){return Math.floor(Date.now()*Math.random()).toString(16)}}},mounted:function(){var e=this.$el,n=e.parentNode,t=document.createComment("fragment#".concat(this.name,"#head")),r=document.createComment("fragment#".concat(this.name,"#tail"));n.insertBefore(t,e),n.insertBefore(r,e),e.appendChild=function(t){n.insertBefore(t,r),freeze(t,"parentNode",e)},e.insertBefore=function(t,r){n.insertBefore(t,r),freeze(t,"parentNode",e)},e.removeChild=function(e){n.removeChild(e),unfreeze(e,"parentNode")},Array.from(e.childNodes).forEach(function(n){return e.appendChild(n)}),n.removeChild(e),freeze(e,"parentNode",n),freeze(e,"nextSibling",r.nextSibling);var o=n.insertBefore;n.insertBefore=function(r,i){o.call(n,r,i!==e?i:t)};var i=n.removeChild;n.removeChild=function(a){if(a===e){for(;t.nextSibling!==r;)e.removeChild(t.nextSibling);n.removeChild(t),n.removeChild(r),unfreeze(e,"parentNode"),n.insertBefore=o,n.removeChild=i}else i.call(n,a)}},render:function(e){var n=this,t=this.$slots.default;return t&&t.length&&t.forEach(function(e){return e.data=vue_fragment_esm_objectSpread({},e.data,{attrs:{fragment:n.name}})}),e("div",{attrs:{fragment:this.name}},t)}};function ssr(e,n){ false&&false}var Fragment=component,SSR=ssr,Plugin={install:function(e){e.component("fragment",component)}},vue_fragment_esm_index={Fragment:component,Plugin:Plugin,SSR:ssr};/* harmony default export */ var vue_fragment_esm = (vue_fragment_esm_index);
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueTreeGridRow.vue?vue&type=script&lang=js&
-//
-//
 //
 //
 //
@@ -3636,8 +3634,8 @@ function normalizeComponent (
 
 var VueTreeGridRow_component = normalizeComponent(
   components_VueTreeGridRowvue_type_script_lang_js_,
-  VueTreeGridRowvue_type_template_id_65f47826_render,
-  VueTreeGridRowvue_type_template_id_65f47826_staticRenderFns,
+  VueTreeGridRowvue_type_template_id_ce47ce50_render,
+  VueTreeGridRowvue_type_template_id_ce47ce50_staticRenderFns,
   false,
   null,
   null,
@@ -3931,14 +3929,14 @@ var VueTreeGridRow_component = normalizeComponent(
     toggleCheckRow: function toggleCheckRow(row, isChecked) {
       var _this7 = this;
 
-      var passToChild = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+      var updateParent = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
       return new promise_default.a(function (resolve) {
         if (row._isDisabled) {
           resolve();
         } else {
-          if (row._childrenLength > 0 && passToChild) {
+          if (row._childrenLength > 0) {
             promise_default.a.all(row[_this7.childrenProperty].map(function (child) {
-              return _this7.toggleCheckRow(child, isChecked);
+              return _this7.toggleCheckRow(child, isChecked, false);
             })).then(function () {
               lodash_set_default()(_this7.cloneTree, [row._path, '_isChecked'].join('.'), isChecked);
             });
@@ -3946,13 +3944,24 @@ var VueTreeGridRow_component = normalizeComponent(
             lodash_set_default()(_this7.cloneTree, [row._path, '_isChecked'].join('.'), isChecked);
           }
 
-          var parent = _this7.getParent(row);
+          if (updateParent) {
+            var parent = _this7.getParent(row);
 
-          while (parent) {
-            _this7.toggleCheckRow(parent, _this7.isChecked(parent), false);
+            while (parent) {
+              var isParentIndeterinate = _this7.isIndeterminate(parent);
 
-            lodash_set_default()(_this7.cloneTree, [parent._path, '_isIndeterminate'].join('.'), _this7.isIndeterminate(parent));
-            parent = _this7.getParent(parent);
+              var isParentChecked = _this7.isChecked(parent);
+
+              if (isParentIndeterinate) {
+                lodash_set_default()(_this7.cloneTree, [parent._path, '_isChecked'].join('.'), false);
+                lodash_set_default()(_this7.cloneTree, [parent._path, '_isIndeterminate'].join('.'), true);
+              } else {
+                lodash_set_default()(_this7.cloneTree, [parent._path, '_isChecked'].join('.'), isParentChecked);
+                lodash_set_default()(_this7.cloneTree, [parent._path, '_isIndeterminate'].join('.'), false);
+              }
+
+              parent = _this7.getParent(parent);
+            }
           }
 
           resolve();

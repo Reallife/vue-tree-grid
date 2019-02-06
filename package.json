@@ -1,6 +1,6 @@
 {
   "name": "@reallife/vue-tree-grid",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple vue tree grid component",
   "author": "Reallife",
   "license": "MIT",
@@ -13,9 +13,17 @@
   "scripts": {
     "serve": "vue-cli-service serve ./demo/index.js",
     "build": "vue-cli-service build --target lib --name vue-tree-grid ./src/index.js",
-    "lint": "vue-cli-service lint",
+    "lint": "vue-cli-service lint --no-fix",
+    "lint:fix": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
+  "keywords": [
+    "vue",
+    "component",
+    "tree",
+    "grid",
+    "table"
+  ],
   "dependencies": {
     "lodash.get": "^4.4.2",
     "lodash.set": "^4.3.2",
@@ -40,5 +48,9 @@
   },
   "resolutions": {
     "terser": "3.14.1"
+  },
+  "gitHooks": {
+    "pre-commit": "yarn run lint:fix && yarn run build && rm ./dist/demo.html && git add .",
+    "pre-push": "yarn run test:unit"
   }
 }

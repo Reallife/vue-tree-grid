@@ -248,14 +248,14 @@ export default {
     getParent(row) {
       return get(this.cloneTree, row._path.split('.').slice(0, -2), null);
     },
-    toggleCheckRow(row, isChecked, passToChild = true) {
+    toggleCheckRow(row, isChecked, updateParent = true) {
       return new Promise((resolve) => {
         if (row._isDisabled) {
           resolve();
         } else {
-          if (row._childrenLength > 0 && passToChild) {
+          if (row._childrenLength > 0) {
             Promise.all(
-              row[this.childrenProperty].map(child => this.toggleCheckRow(child, isChecked)),
+              row[this.childrenProperty].map(child => this.toggleCheckRow(child, isChecked, false)),
             )
               .then(() => {
                 set(this.cloneTree, [row._path, '_isChecked'].join('.'), isChecked);
@@ -263,16 +263,22 @@ export default {
           } else {
             set(this.cloneTree, [row._path, '_isChecked'].join('.'), isChecked);
           }
+          if (updateParent) {
+            let parent = this.getParent(row);
+            while (parent) {
+              const isParentIndeterinate = this.isIndeterminate(parent);
+              const isParentChecked = this.isChecked(parent);
 
-          let parent = this.getParent(row);
-          while (parent) {
-            this.toggleCheckRow(parent, this.isChecked(parent), false);
-            set(
-              this.cloneTree,
-              [parent._path, '_isIndeterminate'].join('.'),
-              this.isIndeterminate(parent),
-            );
-            parent = this.getParent(parent);
+              if (isParentIndeterinate) {
+                set(this.cloneTree, [parent._path, '_isChecked'].join('.'), false);
+                set(this.cloneTree, [parent._path, '_isIndeterminate'].join('.'), true);
+              } else {
+                set(this.cloneTree, [parent._path, '_isChecked'].join('.'), isParentChecked);
+                set(this.cloneTree, [parent._path, '_isIndeterminate'].join('.'), false);
+              }
+
+              parent = this.getParent(parent);
+            }
           }
 
           resolve();
