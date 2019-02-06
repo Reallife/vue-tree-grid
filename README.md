@@ -104,7 +104,7 @@ export default {
 | Name | Required | Type |Default | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | `columns` | **yes** | Array ([Details](#column-properties)) | - | Columns array |
-| `tree` | **yes** | Array ([Details](#tree-sctructure-properties)) | - | Tree structure of rows |
+| `tree` | **yes** | Array ([Details](#tree-structure-properties)) | - | Tree structure of rows |
 | `childrenProperty` | no | String | 'children' | Name of tree's row property that contains children rows |
 | `emptyText` | no | String | 'No data' | Text for empty grid |
 | `rowClass` | no | Function (params: `row` ) | - | Function that returns style classes for each row |
