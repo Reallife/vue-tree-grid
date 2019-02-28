@@ -14,7 +14,7 @@ yarn add @reallife/vue-tree-grid
 
 ## Usage
 
-```
+```vue
 <template>
   <div id="app">
     <VueTreeGrid
