@@ -4,11 +4,11 @@
 
 ## Install
 
-```
+```bash
 npm i --save @reallife/vue-tree-grid
 ```
 or 
-```
+```bash
 yarn add @reallife/vue-tree-grid
 ```
 
@@ -120,7 +120,7 @@ export default {
 | `width` | no | String | 'auto' | Column width |
 
 #### Examples
-```
+```javascript
 [
   // Column with checkbox
   {
@@ -142,7 +142,7 @@ export default {
 
 #### Example tree structure
 
-```
+```javascript
 [
   {
     name: 'Parent 1',
@@ -196,12 +196,13 @@ You can use this properties to define initial state of tree and change it from o
 
 You can use slots for changing output of every header label or cell content.
 
-Slots for body cells looks like `%column_prop%--row-cell`. For example: `name--row-cell`.
-Slots for header cells looks like `%column_prop%--header-cell`. For example: `name--header-cell`.
+Slot names for body cells looks like `%column_prop%--row-cell`. For example: `name--row-cell`.
+
+Slot names for header cells looks like `%column_prop%--header-cell`. For example: `name--header-cell`.
 
 #### Example
 
-```
+```vue
 <VueTreeGrid
   :columns="columns"
   :tree="tree"
