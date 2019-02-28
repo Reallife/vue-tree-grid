@@ -140,6 +140,23 @@ export default {
 
 ## Tree structure properties
 
+Each row in tree after passing in component will be contain this properties:
+
+| Name  | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `_isChecked` | Boolean | `false` | Determines is row checked |
+| `_isIndeterminate` | Boolean | `false` | Determines is row indeterminate |
+| `_isExpanded` | Boolean | `false` | Determines is row expanded |
+| `_isFolded` | Boolean | `false` | Determines is row folded (for children rows). If parent row is expanded then children rows will be folded |
+| `_isDisabled` | Boolean | `false` | Determines is row disabled (row don't change own `_isChecked` property on parent row checking/unchecking) |
+| `_isHidden` | Boolean | `false` | Determines is row hidden (row just hidden, it continue reacts on parent checking/unchecking). If row is hidden, all it's children also hides |
+| `_childrenLength` | Integer | - | Count of row's children. |
+| `_level` | Integer | - | Row's level in tree structure. Counts with 1 |
+| `_path` | String | - | Row's path in tree structure. For example: `0.children.4.children.1` |
+| `_index` | Integer | - | Row's index in table |
+
+You can use this properties to define initial state of tree and change it from outside of component.
+
 #### Example tree structure
 
 ```javascript
@@ -167,23 +184,6 @@ export default {
   },
 ]
 ```
-
-Each row in tree after passing in component will be contain this properties:
-
-| Name  | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| `_isChecked` | Boolean | `false` | Determines is row checked |
-| `_isIndeterminate` | Boolean | `false` | Determines is row indeterminate |
-| `_isExpanded` | Boolean | `false` | Determines is row expanded |
-| `_isFolded` | Boolean | `false` | Determines is row folded (for children rows). If parent row is expanded then children rows will be folded |
-| `_isDisabled` | Boolean | `false` | Determines is row disabled (row don't change own `_isChecked` property on parent row checking/unchecking) |
-| `_isHidden` | Boolean | `false` | Determines is row hidden (row just hidden, it continue reacts on parent checking/unchecking). If row is hidden, all it's children also hides |
-| `_childrenLength` | Integer | - | Count of row's children. |
-| `_level` | Integer | - | Row's level in tree structure. Counts with 1 |
-| `_path` | String | - | Row's path in tree structure. For example: `0.children.4.children.1` |
-| `_index` | Integer | - | Row's index in table |
-
-You can use this properties to define initial state of tree and change it from outside of component.
 
 ## Component events
 
