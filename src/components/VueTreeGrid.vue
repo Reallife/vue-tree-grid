@@ -126,7 +126,7 @@ export default {
         );
     },
     rowCellsSlotNames() {
-      return Object.keys(this.$scopedSlots).filter(slotKey => slotKey.endsWith('--row-cell'));
+      return Object.keys(this.$scopedSlots).filter((slotKey) => slotKey.endsWith('--row-cell'));
     },
   },
   watch: {
@@ -156,7 +156,7 @@ export default {
     },
     onCheckAll(event) {
       return Promise.all(
-        this.cloneTree.map(row => this.toggleCheckRow(row, event.target.checked)),
+        this.cloneTree.map((row) => this.toggleCheckRow(row, event.target.checked)),
       )
         .then(() => {
           this.getAllCheckedRows()
@@ -170,11 +170,11 @@ export default {
       return new Promise((resolve) => {
         if (parent === null) {
           Promise.all(
-            this.cloneTree.map(child => this.getAllCheckedRows(child)),
+            this.cloneTree.map((child) => this.getAllCheckedRows(child)),
           )
             .then((checkedChildrenRows) => {
               checkedChildrenRows
-                .filter(rows => rows.length > 0)
+                .filter((rows) => rows.length > 0)
                 .forEach((rows) => {
                   checkedRows = checkedRows.concat(rows);
                 });
@@ -186,11 +186,11 @@ export default {
           }
           if (parent._childrenLength > 0) {
             Promise.all(
-              parent[this.childrenProperty].map(child => this.getAllCheckedRows(child)),
+              parent[this.childrenProperty].map((child) => this.getAllCheckedRows(child)),
             )
               .then((checkedChildrenRows) => {
                 checkedChildrenRows
-                  .filter(rows => rows.length > 0)
+                  .filter((rows) => rows.length > 0)
                   .forEach((rows) => {
                     checkedRows = checkedRows.concat(rows);
                   });
@@ -255,7 +255,9 @@ export default {
         } else {
           if (row._childrenLength > 0) {
             Promise.all(
-              row[this.childrenProperty].map(child => this.toggleCheckRow(child, isChecked, false)),
+              row[this.childrenProperty].map(
+                (child) => this.toggleCheckRow(child, isChecked, false),
+              ),
             )
               .then(() => {
                 set(this.cloneTree, [row._path, '_isChecked'].join('.'), isChecked);
@@ -303,15 +305,15 @@ export default {
         return row._isChecked;
       }
 
-      return row[this.childrenProperty].every(child => child._isChecked);
+      return row[this.childrenProperty].every((child) => child._isChecked);
     },
     isIndeterminate(row) {
       if (row._childrenLength === 0) {
         return false;
       }
 
-      return !row[this.childrenProperty].every(child => child._isChecked)
-        && row[this.childrenProperty].some(child => child._isChecked || child._isIndeterminate);
+      return !row[this.childrenProperty].every((child) => child._isChecked)
+        && row[this.childrenProperty].some((child) => child._isChecked || child._isIndeterminate);
     },
   },
 };

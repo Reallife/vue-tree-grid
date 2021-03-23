@@ -4,7 +4,6 @@ import VueTreeGrid from '../../src/components/VueTreeGrid.vue';
 
 describe('VueTreeGrid.vue', () => {
   it('renders empty grid', () => {
-    const emptyText = 'No data';
     const wrapper = shallowMount(VueTreeGrid, {
       propsData: {
         columns: [
@@ -16,6 +15,6 @@ describe('VueTreeGrid.vue', () => {
         tree: [],
       },
     });
-    expect(wrapper.text()).to.include(emptyText);
+    expect(wrapper.text()).to.include('No data');
   });
 });
